@@ -33,6 +33,10 @@
   content: "\e901";
 }
 
+._icon-quote:before {
+  content: "\e902";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -727,6 +731,27 @@ body::after {
   background: rgb(239, 239, 239);
   border-right: 5px solid red;
   padding: 0 0.625rem 0.9375rem 0.9375rem;
+}
+
+.content__highlighted blockquote::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: red;
+  padding: 0.9375rem 0;
+}
+
+.content__highlighted blockquote figcaption {
+  margin-top: 0.625rem;
+  font-size: 1rem;
+  text-align: right;
 }
 
 .content__header {

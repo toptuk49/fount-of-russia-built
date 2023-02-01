@@ -3918,7 +3918,10 @@
                 if (targetElement.classList.contains("search-header__button-mobile")) {
                     document.querySelector(".search-container").classList.add("_active");
                     targetElement.classList.add("_disabled");
-                    if (document.querySelector("html").classList.contains("menu-open")) document.querySelector("html").classList.remove("menu-open");
+                    if (document.querySelector("html").classList.contains("menu-open") && document.querySelector("html").classList.contains("lock")) {
+                        document.querySelector("html").classList.remove("menu-open");
+                        document.querySelector("html").classList.remove("lock");
+                    }
                 }
             }
         };
